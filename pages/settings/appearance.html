@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TrustCollab AI - Appearance</title>
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+    <link rel="stylesheet" href="../../css/settings.css">
+
+</head>
+
+<body>
+
+    <div id="sidebar-container"></div>
+
+    <div class="main-content">
+
+        <div class="settings-container">
+
+            <div id="settings-sidebar-container"></div>
+
+            <div class="settings-content">
+
+                <h2 class="settings-heading">
+                    Appearance Settings
+                </h2>
+
+                <!-- THEME -->
+
+                <div class="appearance-card">
+
+                    <h3>
+                        Theme
+                    </h3>
+
+                    <div class="theme-grid">
+
+                        <div class="theme-option active-theme">
+
+                            <h4>Light</h4>
+
+                            <p>
+                                Clean and bright interface
+                            </p>
+
+                        </div>
+
+                        <div class="theme-option">
+
+                            <h4>Dark</h4>
+
+                            <p>
+                                Reduce eye strain
+                            </p>
+
+                        </div>
+
+                        <div class="theme-option">
+
+                            <h4>System</h4>
+
+                            <p>
+                                Match device settings
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- FONT SIZE -->
+
+                <div class="appearance-card">
+
+                    <h3>
+                        Font Size
+                    </h3>
+
+                    <select class="appearance-select">
+
+                        <option>Small</option>
+                        <option selected>Medium</option>
+                        <option>Large</option>
+
+                    </select>
+
+                </div>
+
+                <!-- LAYOUT -->
+
+                <div class="appearance-card">
+
+                    <h3>
+                        Layout Preferences
+                    </h3>
+
+                    <div class="appearance-row">
+
+                        <div>
+
+                            <strong>
+                                Compact Mode
+                            </strong>
+
+                            <p>
+                                Reduce spacing throughout the app
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input type="checkbox">
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+                    <div class="appearance-row">
+
+                        <div>
+
+                            <strong>
+                                Animations
+                            </strong>
+
+                            <p>
+                                Enable interface animations
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input type="checkbox" checked>
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <!-- ACCENT COLOR -->
+
+                <div class="appearance-card">
+
+                    <h3>
+                        Accent Color
+                    </h3>
+
+                    <div class="color-grid">
+
+                        <div class="color-circle color-indigo"></div>
+                        <div class="color-circle color-blue"></div>
+                        <div class="color-circle color-green"></div>
+                        <div class="color-circle color-orange"></div>
+                        <div class="color-circle color-pink"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../../js/sidebar-loader.js"></script>
+    <script src="../../js/settings-sidebar-loader.js"></script>
+    <script src="../../js/appearance.js"></script>
+
+</body>
+
+</html>

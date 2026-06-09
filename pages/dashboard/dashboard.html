@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustCollab AI - Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+
+<body>
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+
+        <div class="dashboard-header">
+
+            <div class="dashboard-title">
+                Dashboard
+            </div>
+
+            <input
+                type="text"
+                class="search-bar"
+                placeholder="Search files, messages, tasks..."
+            >
+
+        </div>
+
+        <!-- Welcome Banner -->
+
+        <div class="welcome-banner">
+
+            <h2>
+                Good morning, Arjun 👋
+            </h2>
+
+            <p>
+                Monday, 9 June 2026 • Chennai, India • Continuous validation pipeline secure.
+            </p>
+
+            <div class="action-button-group">
+
+                <button
+                    class="action-btn"
+                    onclick="window.location.href='../groups/groups.html'">
+                    + New Group
+                </button>
+
+                <button
+                    class="action-btn"
+                    onclick="window.location.href='../files/files.html'">
+                    📁 Upload File
+                </button>
+
+                <button
+                    class="action-btn"
+                    onclick="window.location.href='../ai/ai.html'">
+                    ✨ Ask AI
+                </button>
+
+                <button
+                    class="action-btn"
+                    onclick="window.location.href='../security/security.html'">
+                    🛡 Security
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Metrics -->
+
+        <div class="metrics-grid">
+
+            <button class="metric-tile-button">
+
+                <div class="metric-label">
+                    Groups
+                </div>
+
+                <div class="metric-value">
+                    4
+                </div>
+
+                <div class="metric-subtext">
+                    2 active project hubs today
+                </div>
+
+            </button>
+
+            <button class="metric-tile-button">
+
+                <div class="metric-label">
+                    My Files
+                </div>
+
+                <div class="metric-value">
+                    38
+                </div>
+
+                <div class="metric-subtext">
+                    2.1 GB of cloud data used
+                </div>
+
+            </button>
+
+            <button class="metric-tile-button">
+
+                <div class="metric-label">
+                    Open Tasks
+                </div>
+
+                <div class="metric-value">
+                    7
+                </div>
+
+                <div class="metric-subtext overdue">
+                    2 items overdue
+                </div>
+
+            </button>
+
+            <button class="metric-tile-button trust-score-card">
+
+                <div class="metric-label">
+                    Trust Score
+                </div>
+
+                <div class="metric-value">
+                    92
+                    <span class="trust-total">/100</span>
+                </div>
+
+                <div class="metric-subtext safe">
+                    Low Risk Profile
+                </div>
+
+            </button>
+
+        </div>
+
+        <!-- Bottom Section -->
+
+        <div class="content-split-layout">
+
+            <!-- Recent Files -->
+
+            <div class="content-card">
+
+                <div class="card-header-row">
+
+                    <div class="card-title">
+                        Recent Workspace Files
+                    </div>
+
+                    <a href="#" class="view-all-link">
+                        View all →
+                    </a>
+
+                </div>
+
+                <div class="file-list">
+
+                    <div class="file-item">
+
+                        <div class="file-meta-left">
+
+                            <div class="file-icon-placeholder">
+                                PDF
+                            </div>
+
+                            <div>
+
+                                <div class="file-name">
+                                    Thesis_Draft_v3.pdf
+                                </div>
+
+                                <div class="file-size">
+                                    2.4 MB • 2 hours ago
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="file-badge">
+                            Private
+                        </div>
+
+                    </div>
+
+                    <div class="file-item">
+
+                        <div class="file-meta-left">
+
+                            <div class="file-icon-placeholder png-icon">
+                                PNG
+                            </div>
+
+                            <div>
+
+                                <div class="file-name">
+                                    UI_Mockup_Final.png
+                                </div>
+
+                                <div class="file-size">
+                                    880 KB • 5 hours ago
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="file-badge group-badge">
+                            Group
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Security Stream -->
+
+            <div class="content-card">
+
+                <div class="card-header-row">
+
+                    <div class="card-title">
+                        Security State Stream
+                    </div>
+
+                </div>
+
+                <div class="security-stream">
+
+                    <div class="stream-alert-box verified">
+
+                        <div>
+
+                            <div class="alert-heading">
+                                Device Identity Verified
+                            </div>
+
+                            <div class="alert-details">
+                                Chrome • MacOS • Chennai baseline confirmed.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="stream-alert-box">
+
+                        <div>
+
+                            <div class="alert-heading warning-heading">
+                                Dynamic Location Delta Detected
+                            </div>
+
+                            <div class="alert-details">
+                                Firefox • Mumbai — Background contextual step-up required.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src="../../js/sidebar-loader.js"></script>
+    <script src="../../js/dashboard.js"></script>
+
+</body>
+</html>

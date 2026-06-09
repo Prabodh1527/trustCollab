@@ -1,0 +1,25 @@
+:root {
+
+    --primary-indigo: #4F46E5;
+    --indigo-dark: #3730A3;
+    --indigo-light: #EEF2F6;
+
+    --bg-lavender: #F5F3FF;
+    --card-bg: #FFFFFF;
+
+    --sidebar-bg: #1E1B4B;
+
+    --text-main: #1E1B4B;
+    --text-muted: #6B7280;
+
+    --accent-amber: #F97316;
+    --accent-emerald: #10B981;
+
+    --transition-smooth: all 0.25s cubic-bezier(
+        0.4,
+        0,
+        0.2,
+        1
+    );
+
+}

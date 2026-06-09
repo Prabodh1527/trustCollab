@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustCollab AI - Danger Zone</title>
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+    <link rel="stylesheet" href="../../css/settings.css">
+</head>
+
+<body>
+
+    <div id="sidebar-container"></div>
+
+    <div class="main-content">
+
+        <div class="settings-container">
+
+            <div id="settings-sidebar-container"></div>
+
+            <div class="settings-content">
+
+                <h2 class="settings-heading">
+                    Danger Zone
+                </h2>
+
+                <div class="danger-card">
+
+                    <h3>
+                        Sign Out From All Devices
+                    </h3>
+
+                    <p>
+                        Immediately terminate all active sessions except the current one.
+                    </p>
+
+                    <button
+                        class="danger-action-btn"
+                        onclick="logoutAllDevices()"
+                    >
+                        Sign Out All Devices
+                    </button>
+
+                </div>
+
+                <div class="danger-card">
+
+                    <h3>
+                        Transfer Workspace Ownership
+                    </h3>
+
+                    <p>
+                        Transfer ownership of all workspaces to another member.
+                    </p>
+
+                    <button
+                        class="danger-action-btn"
+                        onclick="transferOwnership()"
+                    >
+                        Transfer Ownership
+                    </button>
+
+                </div>
+
+                <div class="danger-card">
+
+                    <h3>
+                        Delete Workspace
+                    </h3>
+
+                    <p>
+                        Permanently delete workspace files, messages and settings.
+                    </p>
+
+                    <button
+                        class="danger-action-btn"
+                        onclick="deleteWorkspace()"
+                    >
+                        Delete Workspace
+                    </button>
+
+                </div>
+
+                <div class="danger-card">
+
+                    <h3>
+                        Delete Account
+                    </h3>
+
+                    <p>
+                        Permanently remove your TrustCollab AI account and all associated data.
+                    </p>
+
+                    <button
+                        class="danger-action-btn"
+                        onclick="deleteAccount()"
+                    >
+                        Delete Account
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../../js/sidebar-loader.js"></script>
+    <script src="../../js/settings.js"></script>
+    <script src="../../js/settings-sidebar-loader.js"></script>
+
+</body>
+
+</html>

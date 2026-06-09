@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustCollab AI - AI Assistant</title>
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+    <link rel="stylesheet" href="../../css/ai.css">
+</head>
+
+<body>
+
+    <div id="sidebar-container"></div>
+
+    <div class="main-content">
+
+        <div class="ai-layout">
+
+            <!-- LEFT PANEL -->
+
+            <div class="ai-sidebar">
+
+                <h2 class="sidebar-title">
+                    AI Modes
+                </h2>
+
+                <div
+                    class="ai-mode-card active"
+                    onclick="showSection('chat', this)"
+                >
+                    <div class="mode-icon">💬</div>
+
+                    <div>
+                        <h3>AI Chat</h3>
+                        <p>General workspace assistant</p>
+                    </div>
+                </div>
+
+                <div
+                    class="ai-mode-card"
+                    onclick="showSection('pdf', this)"
+                >
+                    <div class="mode-icon">📄</div>
+
+                    <div>
+                        <h3>PDF Summarizer</h3>
+                        <p>Upload & summarize PDFs</p>
+                    </div>
+                </div>
+
+                <div
+                    class="ai-mode-card"
+                    onclick="showSection('qa', this)"
+                >
+                    <div class="mode-icon">❓</div>
+
+                    <div>
+                        <h3>Document Q&A</h3>
+                        <p>Ask questions from files</p>
+                    </div>
+                </div>
+
+                <div
+                    class="ai-mode-card"
+                    onclick="showSection('summary', this)"
+                >
+                    <div class="mode-icon">📝</div>
+
+                    <div>
+                        <h3>Chat Summary</h3>
+                        <p>Summarize discussions</p>
+                    </div>
+                </div>
+
+                <div
+                    class="ai-mode-card"
+                    onclick="showSection('search', this)"
+                >
+                    <div class="mode-icon">🔍</div>
+
+                    <div>
+                        <h3>Smart Search</h3>
+                        <p>Search workspace instantly</p>
+                    </div>
+                </div>
+
+                <div class="ai-tools">
+
+                    <button
+                        class="tool-btn"
+                        onclick="uploadPDF()"
+                    >
+                        Upload PDF
+                    </button>
+
+                    <button
+                        class="tool-btn"
+                        onclick="clearChat()"
+                    >
+                        Clear Chat
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT PANEL -->
+
+            <div class="chat-section">
+
+                <!-- AI CHAT -->
+
+                <div id="chatSection" class="section-page">
+
+                    <div class="chat-header">
+
+                        <h1>AI Chat</h1>
+
+                        <p>
+                            TrustCollab intelligent workspace assistant
+                        </p>
+
+                    </div>
+
+                    <div class="chat-box" id="chatBox">
+
+                        <div class="ai-message">
+
+                            <div class="message-label">
+                                TrustCollab AI
+                            </div>
+
+                            <div class="message-content">
+                                Hello Arjun 👋 How can I help you today
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="chat-input-section">
+
+                        <input
+                            type="text"
+                            id="userInput"
+                            placeholder="Ask anything..."
+                        >
+
+                        <button
+                            class="send-btn"
+                            onclick="sendMessage()"
+                        >
+                            Send
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- PDF -->
+
+                <div
+                    id="pdfSection"
+                    class="section-page hidden-section"
+                >
+
+                    <div class="chat-header">
+
+                        <h1>PDF Summarizer</h1>
+
+                        <p>
+                            Generate AI summaries from uploaded PDFs
+                        </p>
+
+                    </div>
+
+                    <div class="feature-card">
+
+                        <h3>Upload PDF</h3>
+
+                        <p>
+                            Drag & drop PDF files here.
+                        </p>
+
+                        <button
+                            class="send-btn"
+                            onclick="uploadPDF()"
+                        >
+                            Upload PDF
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- QA -->
+
+                <div
+                    id="qaSection"
+                    class="section-page hidden-section"
+                >
+
+                    <div class="chat-header">
+
+                        <h1>Document Q&A</h1>
+
+                        <p>
+                            Ask questions from uploaded documents
+                        </p>
+
+                    </div>
+
+                    <div class="feature-card">
+
+                        <input
+                            type="text"
+                            placeholder="Ask a question from your files..."
+                        >
+
+                        <button class="send-btn">
+                            Ask Question
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- SUMMARY -->
+
+                <div
+                    id="summarySection"
+                    class="section-page hidden-section"
+                >
+
+                    <div class="chat-header">
+
+                        <h1>Chat Summary</h1>
+
+                        <p>
+                            Summarize conversations and discussions
+                        </p>
+
+                    </div>
+
+                    <div class="feature-card">
+
+                        <h3>Recent Summary</h3>
+
+                        <p>
+                            No summaries generated yet.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- SEARCH -->
+
+                <div
+                    id="searchSection"
+                    class="section-page hidden-section"
+                >
+
+                    <div class="chat-header">
+
+                        <h1>Smart Search</h1>
+
+                        <p>
+                            Search across groups, files and tasks
+                        </p>
+
+                    </div>
+
+                    <div class="feature-card">
+
+                        <input
+                            type="text"
+                            placeholder="Search workspace..."
+                        >
+
+                        <button class="send-btn">
+                            Search
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../../js/sidebar-loader.js"></script>
+    <script src="../../js/ai.js"></script>
+
+</body>
+</html>

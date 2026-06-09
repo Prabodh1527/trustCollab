@@ -1,0 +1,427 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TrustCollab AI - My Files</title>
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+    <link rel="stylesheet" href="../../css/files.css">
+
+</head>
+
+<body>
+
+    <div id="sidebar-container"></div>
+
+    <div class="main-content">
+
+        <!-- HEADER -->
+
+        <div class="files-header">
+
+            <div>
+
+                <h1 class="files-title">
+                    My Files
+                </h1>
+
+                <p class="files-subtitle">
+                    Secure cloud storage, sharing and AI-powered file management.
+                </p>
+
+            </div>
+
+            <div class="files-actions">
+
+                <button
+                    class="secondary-btn"
+                    onclick="openFolderModal()"
+                >
+                    📁 New Folder
+                </button>
+
+                <button
+                    class="primary-btn"
+                    onclick="openUploadModal()"
+                >
+                    ⬆ Upload File
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- SEARCH -->
+
+        <div class="search-section">
+
+            <input
+                type="text"
+                class="search-bar"
+                placeholder="Search files, folders, documents..."
+            >
+
+        </div>
+
+        <!-- STORAGE OVERVIEW -->
+
+        <div class="storage-grid">
+
+            <div class="storage-card">
+
+                <div class="storage-label">
+                    Used Storage
+                </div>
+
+                <div class="storage-value">
+                    2.1 GB
+                </div>
+
+            </div>
+
+            <div class="storage-card">
+
+                <div class="storage-label">
+                    Available
+                </div>
+
+                <div class="storage-value">
+                    7.9 GB
+                </div>
+
+            </div>
+
+            <div class="storage-card">
+
+                <div class="storage-label">
+                    Total Files
+                </div>
+
+                <div class="storage-value">
+                    38
+                </div>
+
+            </div>
+
+            <div class="storage-card">
+
+                <div class="storage-label">
+                    Shared Files
+                </div>
+
+                <div class="storage-value">
+                    12
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FOLDERS -->
+
+        <div class="section-header">
+
+            <h2>
+                My Folders
+            </h2>
+
+        </div>
+
+        <div class="folder-grid">
+
+            <div class="folder-card">
+                📄 Documents
+            </div>
+
+            <div class="folder-card">
+                🖼 Images
+            </div>
+
+            <div class="folder-card">
+                🎥 Videos
+            </div>
+
+            <div class="folder-card">
+                🚀 Projects
+            </div>
+
+        </div>
+
+        <!-- FILES -->
+
+        <div class="section-header">
+
+            <h2>
+                Recent Files
+            </h2>
+
+        </div>
+
+        <div class="files-list">
+
+            <div class="file-card">
+
+                <div class="file-info">
+
+                    <div class="file-icon">
+                        PDF
+                    </div>
+
+                    <div>
+
+                        <div class="file-name">
+                            Final_Report.pdf
+                        </div>
+
+                        <div class="file-meta">
+                            2.4 MB • Updated 2 hours ago
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="file-right">
+
+                    <div class="file-badge private">
+                        Private
+                    </div>
+
+                    <div class="file-actions">
+
+                        <button onclick="downloadFile()">
+                            Download
+                        </button>
+
+                        <button onclick="shareFile()">
+                            Share
+                        </button>
+
+                        <button onclick="deleteFile()">
+                            Delete
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="file-card">
+
+                <div class="file-info">
+
+                    <div class="file-icon image">
+                        PNG
+                    </div>
+
+                    <div>
+
+                        <div class="file-name">
+                            UI_Mockup.png
+                        </div>
+
+                        <div class="file-meta">
+                            850 KB • Updated Yesterday
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="file-right">
+
+                    <div class="file-badge shared">
+                        Shared
+                    </div>
+
+                    <div class="file-actions">
+
+                        <button onclick="downloadFile()">
+                            Download
+                        </button>
+
+                        <button onclick="shareFile()">
+                            Share
+                        </button>
+
+                        <button onclick="deleteFile()">
+                            Delete
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="file-card">
+
+                <div class="file-info">
+
+                    <div class="file-icon video">
+                        MP4
+                    </div>
+
+                    <div>
+
+                        <div class="file-name">
+                            Demo_Video.mp4
+                        </div>
+
+                        <div class="file-meta">
+                            18 MB • Updated Today
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="file-right">
+
+                    <div class="file-badge public">
+                        Public
+                    </div>
+
+                    <div class="file-actions">
+
+                        <button onclick="downloadFile()">
+                            Download
+                        </button>
+
+                        <button onclick="shareFile()">
+                            Share
+                        </button>
+
+                        <button onclick="deleteFile()">
+                            Delete
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- AI FILE ASSISTANT -->
+
+        <div class="ai-assistant-card">
+
+            <div>
+
+                <h2>
+                    ✨ AI File Assistant
+                </h2>
+
+                <p>
+                    Summarize documents, extract insights and ask questions about uploaded files.
+                </p>
+
+            </div>
+
+            <div class="ai-actions">
+
+                <button
+                    class="secondary-btn"
+                    onclick="summarizeFile()"
+                >
+                    Summarize
+                </button>
+
+                <button
+                    class="primary-btn"
+                    onclick="askFileAI()"
+                >
+                    Ask AI
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- UPLOAD MODAL -->
+
+    <div id="uploadModal" class="modal-overlay">
+
+        <div class="modal-box">
+
+            <h2>Upload File</h2>
+
+            <input
+                type="file"
+                id="fileInput"
+            >
+
+            <div class="modal-buttons">
+
+                <button
+                    class="secondary-btn"
+                    onclick="closeUploadModal()"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    class="primary-btn"
+                    onclick="uploadFile()"
+                >
+                    Upload
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOLDER MODAL -->
+
+    <div id="folderModal" class="modal-overlay">
+
+        <div class="modal-box">
+
+            <h2>Create Folder</h2>
+
+            <input
+                type="text"
+                id="folderName"
+                placeholder="Folder Name"
+            >
+
+            <div class="modal-buttons">
+
+                <button
+                    class="secondary-btn"
+                    onclick="closeFolderModal()"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    class="primary-btn"
+                    onclick="createFolder()"
+                >
+                    Create
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../../js/sidebar-loader.js"></script>
+    <script src="../../js/files.js"></script>
+
+</body>
+</html>
+```

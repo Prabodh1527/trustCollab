@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TrustCollab AI - Security Center</title>
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+    <link rel="stylesheet" href="../../css/security.css">
+
+</head>
+
+<body>
+
+    <div id="sidebar-container"></div>
+
+    <div class="main-content">
+
+        <!-- HEADER -->
+
+        <div class="security-header">
+
+            <div>
+
+                <h1 class="security-title">
+                    Security Center
+                </h1>
+
+                <p class="security-subtitle">
+                    Zero Trust monitoring, threat detection and AI-powered security analytics.
+                </p>
+
+            </div>
+
+            <div class="header-actions">
+
+                <button
+                    class="secondary-btn"
+                    onclick="downloadReport()"
+                >
+                    Download Report
+                </button>
+
+                <button
+                    class="primary-btn"
+                    onclick="runAudit()"
+                >
+                    Run AI Security Audit
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- TOP CARDS -->
+
+        <div class="security-grid">
+
+            <!-- TRUST SCORE -->
+
+            <div class="security-card trust-card">
+
+                <div class="card-title">
+                    Workspace Trust Score
+                </div>
+
+                <div class="trust-score">
+                    92
+                </div>
+
+                <div class="trust-status">
+                    Low Risk
+                </div>
+
+                <div class="progress-bar">
+                    <div
+                        class="progress-fill"
+                        style="width:92%"
+                    ></div>
+                </div>
+
+                <div class="trust-breakdown">
+
+                    <div>
+                        Device Score
+                        <span>25 / 25</span>
+                    </div>
+
+                    <div>
+                        Location Score
+                        <span>28 / 30</span>
+                    </div>
+
+                    <div>
+                        Behavior Score
+                        <span>22 / 25</span>
+                    </div>
+
+                    <div>
+                        Event Penalty
+                        <span>-3</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- MFA -->
+
+            <div class="security-card">
+
+                <div class="card-title">
+                    Multi-Factor Authentication
+                </div>
+
+                <div class="status-pill success">
+                    Enabled
+                </div>
+
+                <div class="security-info">
+
+                    <p>
+                        Authenticator App Connected
+                    </p>
+
+                    <p>
+                        Last Verification: Today
+                    </p>
+
+                    <p>
+                        Recovery Codes Generated
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- DEVICE HEALTH -->
+
+            <div class="security-card">
+
+                <div class="card-title">
+                    Device Health
+                </div>
+
+                <div class="status-pill success">
+                    Healthy
+                </div>
+
+                <div class="security-info">
+
+                    <p>
+                        OS Updated
+                    </p>
+
+                    <p>
+                        Antivirus Active
+                    </p>
+
+                    <p>
+                        Firewall Enabled
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ACTIVE SESSIONS -->
+
+        <div class="section-card">
+
+            <div class="section-header">
+
+                <h2>
+                    Active Sessions
+                </h2>
+
+            </div>
+
+            <div class="session-list">
+
+                <div class="session-item">
+
+                    <div>
+
+                        <h4>
+                            Chrome • Windows
+                        </h4>
+
+                        <p>
+                            Chennai, India • Current Session
+                        </p>
+
+                    </div>
+
+                    <span class="status-pill success">
+                        Active
+                    </span>
+
+                </div>
+
+                <div class="session-item">
+
+                    <div>
+
+                        <h4>
+                            Safari • iPhone
+                        </h4>
+
+                        <p>
+                            Chennai, India • 2 hours ago
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="danger-btn"
+                        onclick="revokeSession()"
+                    >
+                        Revoke
+                    </button>
+
+                </div>
+
+                <div class="session-item suspicious">
+
+                    <div>
+
+                        <h4>
+                            Firefox • Windows
+                        </h4>
+
+                        <p>
+                            Mumbai, India • Suspicious Location
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="danger-btn"
+                        onclick="revokeSession()"
+                    >
+                        Revoke
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- SECURITY EVENTS -->
+
+        <div class="section-card">
+
+            <div class="section-header">
+
+                <h2>
+                    Security Events Timeline
+                </h2>
+
+            </div>
+
+            <div class="events-list">
+
+                <div class="event-item">
+                    🌍 New Device Login - Mumbai
+                </div>
+
+                <div class="event-item">
+                    ✅ MFA Verification Successful
+                </div>
+
+                <div class="event-item">
+                    🔐 Password Updated
+                </div>
+
+                <div class="event-item">
+                    📎 Public Link Created
+                </div>
+
+                <div class="event-item">
+                    🛡 AI Audit Completed
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ANALYTICS -->
+
+        <div class="analytics-grid">
+
+            <div class="section-card">
+
+                <h2>
+                    Behavioral Analysis
+                </h2>
+
+                <div class="metric-row">
+                    Typical Login Pattern
+                    <span>Normal</span>
+                </div>
+
+                <div class="metric-row">
+                    File Access Pattern
+                    <span>Normal</span>
+                </div>
+
+                <div class="metric-row">
+                    Download Volume
+                    <span>Medium</span>
+                </div>
+
+                <div class="metric-row">
+                    API Requests
+                    <span>Normal</span>
+                </div>
+
+            </div>
+
+            <div class="section-card">
+
+                <h2>
+                    Location History
+                </h2>
+
+                <div class="location-item">
+                    Chennai, India
+                </div>
+
+                <div class="location-item">
+                    Bengaluru, India
+                </div>
+
+                <div class="location-item warning">
+                    Mumbai, India
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ALERTS -->
+
+        <div class="section-card">
+
+            <div class="section-header">
+
+                <h2>
+                    AI Alerts & Recommendations
+                </h2>
+
+            </div>
+
+            <div class="alert-card warning">
+
+                <h4>
+                    Suspicious Login Detected
+                </h4>
+
+                <p>
+                    New login from Mumbai. Review device trust immediately.
+                </p>
+
+                <button
+                    class="danger-btn"
+                    onclick="reviewAlert()"
+                >
+                    Review
+                </button>
+
+            </div>
+
+            <div class="alert-card success">
+
+                <h4>
+                    Security Posture Strong
+                </h4>
+
+                <p>
+                    No critical threats detected by AI security audit.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- AUDIT LOGS -->
+
+        <div class="section-card">
+
+            <div class="section-header">
+
+                <h2>
+                    Recent Audit Logs
+                </h2>
+
+            </div>
+
+            <table class="audit-table">
+
+                <tr>
+                    <th>Time</th>
+                    <th>Event</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>09:15 AM</td>
+                    <td>Login Verification</td>
+                    <td>Success</td>
+                </tr>
+
+                <tr>
+                    <td>11:00 AM</td>
+                    <td>File Access Audit</td>
+                    <td>Success</td>
+                </tr>
+
+                <tr>
+                    <td>02:30 PM</td>
+                    <td>AI Threat Scan</td>
+                    <td>Completed</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="../../js/sidebar-loader.js"></script>
+    <script src="../../js/security.js"></script>
+
+</body>
+</html>

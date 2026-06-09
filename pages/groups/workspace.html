@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustCollab AI - Workspace</title>
+
+    <link rel="stylesheet" href="../../../css/variables.css">
+    <link rel="stylesheet" href="../../../css/sidebar.css">
+    <link rel="stylesheet" href="../../../css/workspace.css">
+</head>
+
+<body>
+
+    <div id="sidebar-container"></div>
+
+    <div class="main-content">
+
+        <div class="workspace-layout">
+
+            <!-- LEFT PANEL -->
+
+            <div class="workspace-sidebar">
+
+                <button
+                    class="back-btn"
+                    onclick="window.location.href='groups.html'"
+                >
+                    ← Back to Groups
+                </button>
+
+                <div class="workspace-info">
+
+                    <h2>Final Year Project</h2>
+
+                    <p>5 Members</p>
+
+                    <div class="group-code-wrapper">
+
+                        <div
+                            class="group-code"
+                            id="workspaceCode"
+                        >
+                            TC-8X2K91
+                        </div>
+
+                        <button
+                            class="copy-code-btn"
+                            onclick="copyWorkspaceCode()"
+                        >
+                            Copy
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="workspace-nav">
+
+                    <button class="workspace-tab active">
+                        Chat
+                    </button>
+
+                    <button class="workspace-tab">
+                        Files
+                    </button>
+
+                    <button class="workspace-tab">
+                        Tasks
+                    </button>
+
+                    <button class="workspace-tab">
+                        Announcements
+                    </button>
+
+                    <button class="workspace-tab">
+                        Members
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT CONTENT -->
+
+            <div class="workspace-content">
+
+                <div class="workspace-header">
+
+                    <div>
+
+                        <h1>#general</h1>
+
+                        <p>
+                            Group collaboration channel
+                        </p>
+
+                    </div>
+
+                    <div class="header-actions">
+
+                        <button
+                            class="secondary-btn"
+                            onclick="summarizeWorkspace()"
+                        >
+                            ✨ Summarize
+                        </button>
+
+                        <button
+                            class="primary-btn"
+                            onclick="askAI()"
+                        >
+                            Ask AI
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- TRUST CARD -->
+
+                <div class="trust-card">
+
+                    <div>
+                        <h3>Workspace Trust Score</h3>
+                        <p>All members verified</p>
+                    </div>
+
+                    <div class="trust-score">
+                        92
+                    </div>
+
+                </div>
+
+                <!-- PINNED -->
+
+                <div class="announcement-banner">
+
+                    📌 Project submission deadline:
+                    28 June 2026
+
+                </div>
+
+                <!-- CHAT AREA -->
+
+                <!-- CHAT SECTION -->
+
+                <div id="chatSection">
+
+                ```
+                <div class="chat-container">
+
+                    <div class="message received">
+
+                        <div class="message-user">
+                            Arjun
+                        </div>
+
+                        <div class="message-text">
+                            Completed dashboard frontend.
+                        </div>
+
+                    </div>
+
+                    <div class="message sent">
+
+                        <div class="message-user">
+                            Team Member
+                        </div>
+
+                        <div class="message-text">
+                            Great. Starting files module.
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="message-input-area">
+
+                    <input
+                        type="text"
+                        placeholder="Type a message..."
+                    >
+
+                    <button class="primary-btn">
+                        Send
+                    </button>
+
+                </div>
+                ```
+
+                </div>
+
+                <!-- FILES SECTION -->
+
+                <div id="filesSection" style="display:none;">
+
+                ```
+                <div class="workspace-card">
+
+                    <div class="section-header">
+
+                        <h3>Workspace Files</h3>
+
+                        <button
+                            class="primary-btn"
+                            onclick="document.getElementById('fileUpload').click()"
+                        >
+                            Upload File
+                        </button>
+
+                        <input
+                            type="file"
+                            id="fileUpload"
+                            style="display:none"
+                        >
+
+                    </div>
+
+                    <div class="file-item">
+                        📄 Project_Report.pdf
+                    </div>
+
+                    <div class="file-item">
+                        🖼 UI_Mockup.png
+                    </div>
+
+                    <div class="file-item">
+                        📊 Presentation.pptx
+                    </div>
+
+                </div>
+                ```
+
+                </div>
+
+                <!-- TASKS SECTION -->
+
+                <div id="tasksSection" style="display:none;">
+
+                ```
+                <div class="workspace-card">
+
+                    <div class="section-header">
+
+                        <h3>Tasks</h3>
+
+                        <button
+                            class="primary-btn"
+                            onclick="addTask()"
+                        >
+                            Add Task
+                        </button>
+
+                    </div>
+
+                    <div class="task-item">
+                        ✅ Dashboard UI Completed
+                    </div>
+
+                    <div class="task-item">
+                        🔄 Workspace Module Development
+                    </div>
+
+                    <div class="task-item">
+                        ⏳ Backend Integration
+                    </div>
+
+                </div>
+                ```
+
+                </div>
+
+                <!-- ANNOUNCEMENTS SECTION -->
+
+                <div id="announcementsSection" style="display:none;">
+
+                ```
+                <div class="workspace-card">
+
+                    <div class="section-header">
+
+                        <h3>Announcements</h3>
+
+                        <button
+                            class="primary-btn"
+                            onclick="addAnnouncement()"
+                        >
+                            New Announcement
+                        </button>
+
+                    </div>
+
+                    <div class="announcement-item">
+                        Project review scheduled on Friday.
+                    </div>
+
+                    <div class="announcement-item">
+                        Submit weekly report before 28 June.
+                    </div>
+
+                </div>
+                ```
+
+                </div>
+
+                <!-- MEMBERS SECTION -->
+
+                <div id="membersSection" style="display:none;">
+
+                ```
+                <div class="workspace-card">
+
+                    <div class="section-header">
+
+                        <h3>Members</h3>
+
+                        <button
+                            class="primary-btn"
+                            onclick="inviteMember()"
+                        >
+                            Invite Member
+                        </button>
+
+                    </div>
+
+                    <div class="member-item">
+                        👑 Arjun Kumar (Admin)
+                    </div>
+
+                    <div class="member-item">
+                        👤 Deepu
+                    </div>
+
+                    <div class="member-item">
+                        👤 Team Member
+                    </div>
+
+                </div>
+                ```
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../../../js/sidebar-loader.js"></script>
+    <script src="../../../js/workspace.js"></script>
+
+</body>
+</html>

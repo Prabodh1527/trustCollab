@@ -1,0 +1,170 @@
+<div class="sidebar">
+
+    <div>
+
+        <div class="brand-logo">
+            <span>TC</span> TrustCollab AI
+        </div>
+
+        <div class="nav-section">
+
+            <div class="nav-section-title">
+                Main
+            </div>
+
+            <button
+                class="nav-btn"
+                onclick="window.location.href='/pages/dashboard/dashboard.html'">
+
+                Dashboard
+
+            </button>
+
+            <button
+                class="nav-btn"
+                onclick="window.location.href='/pages/groups/groups.html'">
+
+                <span>Groups</span>
+
+                <span class="nav-badge">
+                    3
+                </span>
+
+            </button>
+
+            <button
+                class="nav-btn"
+                onclick="window.location.href='/pages/files/files.html'">
+
+                My Files
+
+            </button>
+
+        </div>
+
+        <div class="nav-section">
+
+            <div class="nav-section-title">
+                AI & Security
+            </div>
+
+            <button
+                class="nav-btn"
+                onclick="window.location.href='/pages/ai/ai.html'">
+
+                AI Assistant
+
+            </button>
+
+            <button
+                class="nav-btn"
+                onclick="window.location.href='/pages/security/security.html'">
+
+                <span>Security Center</span>
+
+                <span class="nav-badge">
+                    1
+                </span>
+
+            </button>
+
+            <button
+                class="nav-btn"
+                onclick="window.location.href='/pages/settings/profile.html'">
+
+                Settings
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="user-profile-card">
+
+        <button
+            class="logout-btn"
+            onclick="logout()">
+
+            🚪 Logout
+
+        </button>
+
+        <div class="user-info">
+            Arjun Kumar
+        </div>
+
+        <div class="online-status-btn">
+
+            <div class="status-dot-pulse"></div>
+
+            <span>
+                Online
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        const currentPage =
+        window.location.pathname;
+
+        const buttons =
+        document.querySelectorAll(".nav-btn");
+
+        buttons.forEach(btn => {
+
+            btn.classList.remove("active");
+
+        });
+
+        if(currentPage.includes("dashboard")){
+
+            buttons[0].classList.add("active");
+
+        }
+
+        else if(currentPage.includes("groups")){
+
+            buttons[1].classList.add("active");
+
+        }
+
+        else if(currentPage.includes("files")){
+
+            buttons[2].classList.add("active");
+
+        }
+
+        else if(currentPage.includes("ai")){
+
+            buttons[3].classList.add("active");
+
+        }
+
+        else if(currentPage.includes("security")){
+
+            buttons[4].classList.add("active");
+
+        }
+
+        else if(currentPage.includes("settings")){
+
+            buttons[5].classList.add("active");
+
+        }
+
+    }
+);
+
+</script>

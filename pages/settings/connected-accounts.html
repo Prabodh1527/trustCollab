@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TrustCollab AI - Connected Accounts</title>
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+    <link rel="stylesheet" href="../../css/settings.css">
+</head>
+
+<body>
+
+    <div id="sidebar-container"></div>
+
+    <div class="main-content">
+
+        <div class="settings-container">
+
+            <!-- LEFT MENU -->
+
+            <div id="settings-sidebar-container"></div>
+            <!-- RIGHT CONTENT -->
+
+            <div class="settings-content">
+
+                <h2 class="settings-heading">
+                    Connected Accounts
+                </h2>
+
+                <div class="connected-grid">
+
+                    <!-- GOOGLE -->
+
+                    <div class="account-card">
+
+                        <div class="account-top">
+
+                            <div>
+
+                                <h3>Google</h3>
+
+                                <p>
+                                    Sync Gmail, Drive and Calendar
+                                </p>
+
+                            </div>
+
+                            <span class="status-connected">
+                                Connected
+                            </span>
+
+                        </div>
+
+                        <div class="account-details">
+
+                            <span>
+                                user@gmail.com
+                            </span>
+
+                            <span>
+                                Last Sync: 2 mins ago
+                            </span>
+
+                        </div>
+
+                        <div class="account-actions">
+
+                            <button class="secondary-btn">
+                                Sync Now
+                            </button>
+
+                            <button class="danger-btn">
+                                Disconnect
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- MICROSOFT -->
+
+                    <div class="account-card">
+
+                        <div class="account-top">
+
+                            <div>
+
+                                <h3>Microsoft</h3>
+
+                                <p>
+                                    Outlook, OneDrive & Teams
+                                </p>
+
+                            </div>
+
+                            <span class="status-connected">
+                                Connected
+                            </span>
+
+                        </div>
+
+                        <div class="account-details">
+
+                            <span>
+                                user@outlook.com
+                            </span>
+
+                            <span>
+                                Last Sync: 1 hour ago
+                            </span>
+
+                        </div>
+
+                        <div class="account-actions">
+
+                            <button class="secondary-btn">
+                                Sync Now
+                            </button>
+
+                            <button class="danger-btn">
+                                Disconnect
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- GITHUB -->
+
+                    <div class="account-card">
+
+                        <div class="account-top">
+
+                            <div>
+
+                                <h3>GitHub</h3>
+
+                                <p>
+                                    Repository and CI/CD integration
+                                </p>
+
+                            </div>
+
+                            <span class="status-disconnected">
+                                Not Connected
+                            </span>
+
+                        </div>
+
+                        <div class="account-details">
+
+                            <span>
+                                No account linked
+                            </span>
+
+                        </div>
+
+                        <div class="account-actions">
+
+                            <button class="primary-btn">
+                                Connect GitHub
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- SLACK -->
+
+                    <div class="account-card">
+
+                        <div class="account-top">
+
+                            <div>
+
+                                <h3>Slack</h3>
+
+                                <p>
+                                    Team collaboration notifications
+                                </p>
+
+                            </div>
+
+                            <span class="status-disconnected">
+                                Not Connected
+                            </span>
+
+                        </div>
+
+                        <div class="account-details">
+
+                            <span>
+                                No workspace connected
+                            </span>
+
+                        </div>
+
+                        <div class="account-actions">
+
+                            <button class="primary-btn">
+                                Connect Slack
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ACTIVITY -->
+
+                <div class="integration-log-card">
+
+                    <h3>
+                        Integration Activity
+                    </h3>
+
+                    <div class="integration-log">
+
+                        <div class="log-item">
+                            Google Drive synced successfully
+                            <span>2 mins ago</span>
+                        </div>
+
+                        <div class="log-item">
+                            Microsoft account authenticated
+                            <span>1 hour ago</span>
+                        </div>
+
+                        <div class="log-item">
+                            GitHub connection revoked
+                            <span>Yesterday</span>
+                        </div>
+
+                        <div class="log-item">
+                            Slack workspace disconnected
+                            <span>3 days ago</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../../js/sidebar-loader.js"></script>
+    <script src="../../js/settings.js"></script>
+    <script src="../../js/settings-sidebar-loader.js"></script>
+
+</body>
+
+</html>

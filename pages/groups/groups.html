@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustCollab AI - Groups</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+    <link rel="stylesheet" href="../../css/groups.css">
+</head>
+
+<body>
+
+    <div id="sidebar-container"></div>
+
+    <div class="main-content">
+
+        <!-- Header -->
+
+        <div class="groups-header">
+
+            <div>
+                <h1 class="groups-title">Groups</h1>
+
+                <p class="groups-subtitle">
+                    Collaborate securely with your teams and workspaces.
+                </p>
+            </div>
+
+            <div class="groups-actions">
+
+                <button class="secondary-btn" onclick="joinGroup()">
+                    Join Group
+                </button>
+
+                <button class="primary-btn" onclick="createGroup()">
+                    + Create Group
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Stats -->
+
+        <div class="groups-stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-label">
+                    Total Groups
+                </div>
+
+                <div class="stat-value">
+                    4
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="stat-label">
+                    Members
+                </div>
+
+                <div class="stat-value">
+                    23
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="stat-label">
+                    Shared Files
+                </div>
+
+                <div class="stat-value">
+                    44
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="stat-label">
+                    Open Tasks
+                </div>
+
+                <div class="stat-value">
+                    12
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Groups Grid -->
+
+        <div class="groups-grid">
+
+            <!-- Group 1 -->
+
+            <div class="group-card">
+
+                <div class="group-icon">
+                    🚀
+                </div>
+
+                <h3 class="group-name">
+                    Final Year Project
+                </h3>
+
+                <p class="group-description">
+                    AI-powered Zero Trust collaboration workspace development.
+                </p>
+
+                <div class="group-details">
+
+                    <div class="group-detail">
+                        👥 5 Members
+                    </div>
+
+                    <div class="group-detail">
+                        📁 18 Files
+                    </div>
+
+                    <div class="group-detail">
+                        ✅ 4 Tasks
+                    </div>
+
+                </div>
+
+                <div class="group-status active-status">
+                    Active
+                </div>
+
+                <button
+                    class="workspace-btn"
+                    onclick="openWorkspace('Final Year Project')"
+                >
+                    Open Workspace →
+                </button>
+
+            </div>
+
+            <!-- Group 2 -->
+
+            <div class="group-card">
+
+                <div class="group-icon">
+                    🔐
+                </div>
+
+                <h3 class="group-name">
+                    Cloud Security Lab
+                </h3>
+
+                <p class="group-description">
+                    Research and experimentation around cloud-native security.
+                </p>
+
+                <div class="group-details">
+
+                    <div class="group-detail">
+                        👥 8 Members
+                    </div>
+
+                    <div class="group-detail">
+                        📁 9 Files
+                    </div>
+
+                    <div class="group-detail">
+                        ✅ 2 Tasks
+                    </div>
+
+                </div>
+
+                <div class="group-status active-status">
+                    Active
+                </div>
+
+                <button
+                    class="workspace-btn"
+                    onclick="openWorkspace('Cloud Security Lab')"
+                >
+                    Open Workspace →
+                </button>
+
+            </div>
+
+            <!-- Group 3 -->
+
+            <div class="group-card">
+
+                <div class="group-icon">
+                    🤖
+                </div>
+
+                <h3 class="group-name">
+                    AI Research Team
+                </h3>
+
+                <p class="group-description">
+                    Weekly discussions, AI papers and model experimentation.
+                </p>
+
+                <div class="group-details">
+
+                    <div class="group-detail">
+                        👥 4 Members
+                    </div>
+
+                    <div class="group-detail">
+                        📁 5 Files
+                    </div>
+
+                    <div class="group-detail">
+                        ✅ 0 Tasks
+                    </div>
+
+                </div>
+
+                <div class="group-status active-status">
+                    Active
+                </div>
+
+                <button
+                    class="workspace-btn"
+                    onclick="openWorkspace('AI Research Team')"
+                >
+                    Open Workspace →
+                </button>
+
+            </div>
+
+            <!-- Group 4 -->
+
+            <div class="group-card">
+
+                <div class="group-icon">
+                    ⚙️
+                </div>
+
+                <h3 class="group-name">
+                    Backend Development
+                </h3>
+
+                <p class="group-description">
+                    API development, deployment planning and integrations.
+                </p>
+
+                <div class="group-details">
+
+                    <div class="group-detail">
+                        👥 6 Members
+                    </div>
+
+                    <div class="group-detail">
+                        📁 12 Files
+                    </div>
+
+                    <div class="group-detail">
+                        ✅ 6 Tasks
+                    </div>
+
+                </div>
+
+                <div class="group-status active-status">
+                    Active
+                </div>
+
+                <button
+                    class="workspace-btn"
+                    onclick="openWorkspace('Backend Development')"
+                >
+                    Open Workspace →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CREATE GROUP MODAL -->
+
+<div id="createGroupModal" class="modal-overlay">
+
+    <div class="modal-box">
+
+        <h2>Create Group</h2>
+
+        <input
+            type="text"
+            placeholder="Group Name"
+            class="modal-input"
+        >
+
+        <textarea
+            placeholder="Group Description"
+            class="modal-textarea"
+        ></textarea>
+
+        <div class="modal-buttons">
+
+            <button
+                class="secondary-btn"
+                onclick="closeCreateModal()"
+            >
+                Cancel
+            </button>
+
+            <button
+                class="primary-btn"
+                onclick="generateGroupCode()"
+            >
+                Create Group
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JOIN GROUP MODAL -->
+
+<div id="joinGroupModal" class="modal-overlay">
+
+    <div class="modal-box">
+
+        <h2>Join Group</h2>
+
+        <input
+            id="joinCode"
+            type="text"
+            placeholder="Enter Group Code"
+            class="modal-input"
+        >
+
+        <div class="modal-buttons">
+
+            <button
+                class="secondary-btn"
+                onclick="closeJoinModal()"
+            >
+                Cancel
+            </button>
+
+            <button
+                class="primary-btn"
+                onclick="joinGroupWithCode()"
+            >
+                Join
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- SUCCESS MODAL -->
+
+<div id="successModal" class="modal-overlay">
+
+    <div class="modal-box">
+
+        <h2>Group Created Successfully 🎉</h2>
+
+        <p class="success-text">
+            Share this code with your team:
+        </p>
+
+        <div
+            id="generatedCode"
+            class="group-code-box"
+        >
+        </div>
+
+        <div class="modal-buttons">
+
+            <button
+                class="secondary-btn"
+                onclick="copyCode()"
+            >
+                Copy Code
+            </button>
+
+            <button
+                class="primary-btn"
+                onclick="closeSuccessModal()"
+            >
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <script src="../../js/sidebar-loader.js"></script>
+    <script src="../../js/groups.js"></script>
+
+</body>
+</html>

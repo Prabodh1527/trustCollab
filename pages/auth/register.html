@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TrustCollab AI - Register</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Segoe UI',sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            background:
+            linear-gradient(
+                135deg,
+                #EEF2FF,
+                #F8FAFC
+            );
+        }
+
+        .register-card{
+
+            width:450px;
+
+            background:white;
+
+            padding:40px;
+
+            border-radius:24px;
+
+            box-shadow:
+            0 20px 40px rgba(0,0,0,0.08);
+
+        }
+
+        .logo{
+
+            text-align:center;
+
+            margin-bottom:30px;
+        }
+
+        .logo h1{
+
+            color:#4F46E5;
+
+            margin-bottom:10px;
+        }
+
+        .logo p{
+
+            color:#64748B;
+        }
+
+        .input-group{
+
+            margin-bottom:18px;
+        }
+
+        .input-group label{
+
+            display:block;
+
+            margin-bottom:8px;
+
+            font-weight:600;
+
+            color:#334155;
+        }
+
+        .input-group input{
+
+            width:100%;
+
+            padding:14px;
+
+            border:1px solid #CBD5E1;
+
+            border-radius:12px;
+
+            outline:none;
+        }
+
+        .input-group input:focus{
+
+            border-color:#4F46E5;
+        }
+
+        .register-btn{
+
+            width:100%;
+
+            padding:14px;
+
+            border:none;
+
+            background:#4F46E5;
+
+            color:white;
+
+            border-radius:12px;
+
+            font-size:15px;
+
+            font-weight:600;
+
+            cursor:pointer;
+
+            margin-top:10px;
+        }
+
+        .register-btn:hover{
+
+            background:#4338CA;
+        }
+
+        .login-link{
+
+            text-align:center;
+
+            margin-top:20px;
+        }
+
+        .login-link a{
+
+            color:#4F46E5;
+
+            text-decoration:none;
+
+            font-weight:600;
+        }
+
+        .password-strength{
+
+            margin-top:8px;
+
+            font-size:13px;
+
+            color:#64748B;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="register-card">
+
+        <div class="logo">
+
+            <h1>TrustCollab AI</h1>
+
+            <p>
+                Create your secure workspace account
+            </p>
+
+        </div>
+
+        <form id="registerForm">
+
+            <div class="input-group">
+
+                <label>
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="fullName"
+                    required
+                >
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    required
+                >
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    required
+                >
+
+                <div
+                    class="password-strength"
+                    id="strengthText"
+                >
+                    Password Strength
+                </div>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    Confirm Password
+                </label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    required
+                >
+
+            </div>
+
+            <button
+                type="submit"
+                class="register-btn"
+            >
+                Create Account
+            </button>
+
+        </form>
+
+        <div class="login-link">
+
+            Already have an account?
+
+            <a href="index.html">
+                Login
+            </a>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        const passwordInput =
+        document.getElementById(
+            "password"
+        );
+
+        const strengthText =
+        document.getElementById(
+            "strengthText"
+        );
+
+        passwordInput.addEventListener(
+            "input",
+            () => {
+
+                const value =
+                passwordInput.value;
+
+                if(value.length < 6){
+
+                    strengthText.textContent =
+                    "Weak Password";
+
+                }
+
+                else if(value.length < 10){
+
+                    strengthText.textContent =
+                    "Medium Password";
+
+                }
+
+                else{
+
+                    strengthText.textContent =
+                    "Strong Password";
+
+                }
+
+            }
+        );
+
+        document
+        .getElementById(
+            "registerForm"
+        )
+        .addEventListener(
+            "submit",
+            function(e){
+
+                e.preventDefault();
+
+                const password =
+                document.getElementById(
+                    "password"
+                ).value;
+
+                const confirmPassword =
+                document.getElementById(
+                    "confirmPassword"
+                ).value;
+
+                if(
+                    password !==
+                    confirmPassword
+                ){
+
+                    alert(
+                        "Passwords do not match."
+                    );
+
+                    return;
+                }
+
+                alert(
+                    "Account created successfully."
+                );
+
+                window.location.href =
+                "otp-verification.html";
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
