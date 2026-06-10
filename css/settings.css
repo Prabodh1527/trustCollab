@@ -968,3 +968,28 @@
     background:#334155;
 
 }
+/* Safety structural overrides for dynamic setting injection containers */
+.settings-container {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.settings-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 240px; /* Forces the sub-sidebar to stay wide */
+}
+
+.settings-sidebar .nav-item {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
