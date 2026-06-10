@@ -2,16 +2,14 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TrustCollab AI - Account Security</title>
+    <title>TrustCollab AI - Security Settings</title>
 
     <link rel="stylesheet" href="../../css/variables.css">
     <link rel="stylesheet" href="../../css/sidebar.css">
     <link rel="stylesheet" href="../../css/settings.css">
-
 </head>
 
 <body>
@@ -27,161 +25,33 @@
             <div class="settings-content">
 
                 <h2 class="settings-heading">
-                    Account Security
+                    Security Settings
                 </h2>
 
-                <!-- PASSWORD -->
-
-                <div class="security-card">
-
-                    <h3>
-                        Change Password
-                    </h3>
-
-                    <div class="form-group">
-
-                        <label>
-                            Current Password
-                        </label>
-
-                        <input type="password">
-
+                <div class="device-card">
+                    <div class="device-header">
+                        <div>
+                            <h3>🔑 Change Password</h3>
+                            <p> Ensure your account is using a long, random password to stay secure.</p>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-
-                        <label>
-                            New Password
-                        </label>
-
-                        <input type="password">
-
+                    <div style="margin-top: 1.25rem;">
+                        <button class="danger-btn" style="background-color: #4f46e5; border-color: #4f46e5;">
+                            Update Password
+                        </button>
                     </div>
-
-                    <div class="form-group">
-
-                        <label>
-                            Confirm Password
-                        </label>
-
-                        <input type="password">
-
-                    </div>
-
-                    <button class="primary-btn">
-                        Update Password
-                    </button>
-
                 </div>
 
-                <!-- MFA -->
-
-                <div class="security-card">
-
-                    <h3>
-                        Multi-Factor Authentication
-                    </h3>
-
-                    <div class="security-row">
-
+                <div class="device-card current-device" style="margin-top: 1.5rem;">
+                    <div class="device-header">
                         <div>
-
-                            <strong>
-                                Authenticator App
-                            </strong>
-
-                            <p>
-                                Recommended for maximum security
-                            </p>
-
+                            <h3>🛡 Two-Factor Authentication (2FA)</h3>
+                            <p>Add an extra layer of verification protection to your administrative workspace login.</p>
                         </div>
-
-                        <label class="switch">
-
-                            <input
-                                type="checkbox"
-                                checked
-                            >
-
-                            <span class="slider"></span>
-
-                        </label>
-
-                    </div>
-
-                    <div class="security-row">
-
-                        <div>
-
-                            <strong>
-                                Email Verification
-                            </strong>
-
-                            <p>
-                                Verify important actions
-                            </p>
-
-                        </div>
-
-                        <label class="switch">
-
-                            <input
-                                type="checkbox"
-                                checked
-                            >
-
-                            <span class="slider"></span>
-
-                        </label>
-
-                    </div>
-
-                </div>
-
-                <!-- LOGIN HISTORY -->
-
-                <div class="security-card">
-
-                    <h3>
-                        Recent Login Activity
-                    </h3>
-
-                    <div class="activity-item">
-
-                        <span>
-                            Chrome • Chennai
+                        <span class="device-badge" style="background-color: #ef4444; color: white;">
+                            Disabled
                         </span>
-
-                        <strong>
-                            Active Now
-                        </strong>
-
                     </div>
-
-                    <div class="activity-item">
-
-                        <span>
-                            Safari • iPhone
-                        </span>
-
-                        <strong>
-                            2 Hours Ago
-                        </strong>
-
-                    </div>
-
-                    <div class="activity-item">
-
-                        <span>
-                            Edge • Windows
-                        </span>
-
-                        <strong>
-                            Yesterday
-                        </strong>
-
-                    </div>
-
                 </div>
 
             </div>
